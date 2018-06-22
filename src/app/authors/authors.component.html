@@ -1,0 +1,37 @@
+
+
+<h2 blueColored >{{authors.length + " Authors: " + title}}</h2>
+<ul>
+  <li *ngFor="let author of authors">
+      {{author}}
+  </li>
+<div *ngIf="1==2">Sample NG </div>
+<!--<div *ngIf="visible">Sample NG Visible</div>-->
+<!--<div *ngIf="visible; then evenClicked else oddClicked">Sample NG Visible</div>-->
+<div *ngIf="visible; else oddClicked">Sample NG Visible</div>
+<button (click)="toggleDiv()">Toggle</button>
+
+<div *ngIf="counter % 2 == 0; let randomVariable">
+  {{randomVariable}}
+</div>
+<button (click)="toggleDivCounter()">Counter</button>
+
+<div *ngIf="progLanguages.frontEnd; let frotProgLanguages">
+  {{frotProgLanguages.join(',')}}
+</div>
+
+<ul *ngFor="let hobby of hobbies; let i = index">
+ <li>
+   {{i + 1}}.- {{hobby.name}} - {{hobby.type}}
+ </li>
+</ul>
+
+<input type="text" value="result" (keydown)="myFunction($event)">
+
+
+<h1>Author Name</h1>
+Name: {{authorName}}
+<input type="text" [(ngModel)] = "authorName">
+
+<ng-template #oddClicked>Odd number of clicks</ng-template>
+<ng-template #evenClicked>Even number of clicks</ng-template>

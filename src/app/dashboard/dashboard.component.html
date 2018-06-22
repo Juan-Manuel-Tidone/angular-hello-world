@@ -1,0 +1,7 @@
+<p>
+  dashboard works!
+</p>
+<a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashcboard</a>
+<a [routerLink]="['subdash']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashcboard2</a>
+<a routerLink="/dashboard/subdash" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sub Dashcboard</a>
+<router-outlet></router-outlet>
